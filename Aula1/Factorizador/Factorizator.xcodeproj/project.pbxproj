@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C223B48B26B5E0CC004A104C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223B48A26B5E0CC004A104C /* AppDelegate.swift */; };
+		C223B48D26B5E0CC004A104C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223B48C26B5E0CC004A104C /* SceneDelegate.swift */; };
+		C223B48F26B5E0CC004A104C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223B48E26B5E0CC004A104C /* ViewController.swift */; };
+		C223B49226B5E0CC004A104C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C223B49026B5E0CC004A104C /* Main.storyboard */; };
+		C223B49426B5E0D8004A104C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C223B49326B5E0D8004A104C /* Assets.xcassets */; };
+		C223B49726B5E0D8004A104C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C223B49526B5E0D8004A104C /* LaunchScreen.storyboard */; };
+		C223B4A226B5E0D9004A104C /* FactorizatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223B4A126B5E0D9004A104C /* FactorizatorTests.swift */; };
+		C223B4AD26B5E0D9004A104C /* FactorizatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223B4AC26B5E0D9004A104C /* FactorizatorUITests.swift */; };
+		C223B4BE26B5E3B2004A104C /* RefactorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223B4BD26B5E3B2004A104C /* RefactorViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C223B49E26B5E0D9004A104C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C223B47F26B5E0CC004A104C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C223B48626B5E0CC004A104C;
+			remoteInfo = Factorizator;
+		};
+		C223B4A926B5E0D9004A104C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C223B47F26B5E0CC004A104C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C223B48626B5E0CC004A104C;
+			remoteInfo = Factorizator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C223B48726B5E0CC004A104C /* Factorizator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Factorizator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C223B48A26B5E0CC004A104C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C223B48C26B5E0CC004A104C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C223B48E26B5E0CC004A104C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C223B49126B5E0CC004A104C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C223B49326B5E0D8004A104C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C223B49626B5E0D8004A104C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C223B49826B5E0D8004A104C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C223B49D26B5E0D9004A104C /* FactorizatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactorizatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C223B4A126B5E0D9004A104C /* FactorizatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorizatorTests.swift; sourceTree = "<group>"; };
+		C223B4A326B5E0D9004A104C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C223B4A826B5E0D9004A104C /* FactorizatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactorizatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C223B4AC26B5E0D9004A104C /* FactorizatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorizatorUITests.swift; sourceTree = "<group>"; };
+		C223B4AE26B5E0D9004A104C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C223B4BD26B5E3B2004A104C /* RefactorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactorViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C223B48426B5E0CC004A104C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C223B49A26B5E0D9004A104C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C223B4A526B5E0D9004A104C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C223B47E26B5E0CB004A104C = {
+			isa = PBXGroup;
+			children = (
+				C223B48926B5E0CC004A104C /* Factorizator */,
+				C223B4A026B5E0D9004A104C /* FactorizatorTests */,
+				C223B4AB26B5E0D9004A104C /* FactorizatorUITests */,
+				C223B48826B5E0CC004A104C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C223B48826B5E0CC004A104C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C223B48726B5E0CC004A104C /* Factorizator.app */,
+				C223B49D26B5E0D9004A104C /* FactorizatorTests.xctest */,
+				C223B4A826B5E0D9004A104C /* FactorizatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C223B48926B5E0CC004A104C /* Factorizator */ = {
+			isa = PBXGroup;
+			children = (
+				C223B48A26B5E0CC004A104C /* AppDelegate.swift */,
+				C223B48C26B5E0CC004A104C /* SceneDelegate.swift */,
+				C223B48E26B5E0CC004A104C /* ViewController.swift */,
+				C223B49026B5E0CC004A104C /* Main.storyboard */,
+				C223B49326B5E0D8004A104C /* Assets.xcassets */,
+				C223B49526B5E0D8004A104C /* LaunchScreen.storyboard */,
+				C223B49826B5E0D8004A104C /* Info.plist */,
+				C223B4BD26B5E3B2004A104C /* RefactorViewController.swift */,
+			);
+			path = Factorizator;
+			sourceTree = "<group>";
+		};
+		C223B4A026B5E0D9004A104C /* FactorizatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				C223B4A126B5E0D9004A104C /* FactorizatorTests.swift */,
+				C223B4A326B5E0D9004A104C /* Info.plist */,
+			);
+			path = FactorizatorTests;
+			sourceTree = "<group>";
+		};
+		C223B4AB26B5E0D9004A104C /* FactorizatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C223B4AC26B5E0D9004A104C /* FactorizatorUITests.swift */,
+				C223B4AE26B5E0D9004A104C /* Info.plist */,
+			);
+			path = FactorizatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C223B48626B5E0CC004A104C /* Factorizator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C223B4B126B5E0D9004A104C /* Build configuration list for PBXNativeTarget "Factorizator" */;
+			buildPhases = (
+				C223B48326B5E0CC004A104C /* Sources */,
+				C223B48426B5E0CC004A104C /* Frameworks */,
+				C223B48526B5E0CC004A104C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Factorizator;
+			productName = Factorizator;
+			productReference = C223B48726B5E0CC004A104C /* Factorizator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C223B49C26B5E0D9004A104C /* FactorizatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C223B4B426B5E0D9004A104C /* Build configuration list for PBXNativeTarget "FactorizatorTests" */;
+			buildPhases = (
+				C223B49926B5E0D9004A104C /* Sources */,
+				C223B49A26B5E0D9004A104C /* Frameworks */,
+				C223B49B26B5E0D9004A104C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C223B49F26B5E0D9004A104C /* PBXTargetDependency */,
+			);
+			name = FactorizatorTests;
+			productName = FactorizatorTests;
+			productReference = C223B49D26B5E0D9004A104C /* FactorizatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C223B4A726B5E0D9004A104C /* FactorizatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C223B4B726B5E0D9004A104C /* Build configuration list for PBXNativeTarget "FactorizatorUITests" */;
+			buildPhases = (
+				C223B4A426B5E0D9004A104C /* Sources */,
+				C223B4A526B5E0D9004A104C /* Frameworks */,
+				C223B4A626B5E0D9004A104C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C223B4AA26B5E0D9004A104C /* PBXTargetDependency */,
+			);
+			name = FactorizatorUITests;
+			productName = FactorizatorUITests;
+			productReference = C223B4A826B5E0D9004A104C /* FactorizatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C223B47F26B5E0CC004A104C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					C223B48626B5E0CC004A104C = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					C223B49C26B5E0D9004A104C = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = C223B48626B5E0CC004A104C;
+					};
+					C223B4A726B5E0D9004A104C = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = C223B48626B5E0CC004A104C;
+					};
+				};
+			};
+			buildConfigurationList = C223B48226B5E0CC004A104C /* Build configuration list for PBXProject "Factorizator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C223B47E26B5E0CB004A104C;
+			productRefGroup = C223B48826B5E0CC004A104C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C223B48626B5E0CC004A104C /* Factorizator */,
+				C223B49C26B5E0D9004A104C /* FactorizatorTests */,
+				C223B4A726B5E0D9004A104C /* FactorizatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C223B48526B5E0CC004A104C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C223B49726B5E0D8004A104C /* LaunchScreen.storyboard in Resources */,
+				C223B49426B5E0D8004A104C /* Assets.xcassets in Resources */,
+				C223B49226B5E0CC004A104C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C223B49B26B5E0D9004A104C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C223B4A626B5E0D9004A104C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C223B48326B5E0CC004A104C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C223B4BE26B5E3B2004A104C /* RefactorViewController.swift in Sources */,
+				C223B48F26B5E0CC004A104C /* ViewController.swift in Sources */,
+				C223B48B26B5E0CC004A104C /* AppDelegate.swift in Sources */,
+				C223B48D26B5E0CC004A104C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C223B49926B5E0D9004A104C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C223B4A226B5E0D9004A104C /* FactorizatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C223B4A426B5E0D9004A104C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C223B4AD26B5E0D9004A104C /* FactorizatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C223B49F26B5E0D9004A104C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C223B48626B5E0CC004A104C /* Factorizator */;
+			targetProxy = C223B49E26B5E0D9004A104C /* PBXContainerItemProxy */;
+		};
+		C223B4AA26B5E0D9004A104C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C223B48626B5E0CC004A104C /* Factorizator */;
+			targetProxy = C223B4A926B5E0D9004A104C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C223B49026B5E0CC004A104C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C223B49126B5E0CC004A104C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C223B49526B5E0D8004A104C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C223B49626B5E0D8004A104C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C223B4AF26B5E0D9004A104C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C223B4B026B5E0D9004A104C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C223B4B226B5E0D9004A104C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Factorizator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.Factorizator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C223B4B326B5E0D9004A104C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Factorizator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.Factorizator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C223B4B526B5E0D9004A104C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FactorizatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.FactorizatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Factorizator.app/Factorizator";
+			};
+			name = Debug;
+		};
+		C223B4B626B5E0D9004A104C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FactorizatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.FactorizatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Factorizator.app/Factorizator";
+			};
+			name = Release;
+		};
+		C223B4B826B5E0D9004A104C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FactorizatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.FactorizatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Factorizator;
+			};
+			name = Debug;
+		};
+		C223B4B926B5E0D9004A104C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FactorizatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.FactorizatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Factorizator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C223B48226B5E0CC004A104C /* Build configuration list for PBXProject "Factorizator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C223B4AF26B5E0D9004A104C /* Debug */,
+				C223B4B026B5E0D9004A104C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C223B4B126B5E0D9004A104C /* Build configuration list for PBXNativeTarget "Factorizator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C223B4B226B5E0D9004A104C /* Debug */,
+				C223B4B326B5E0D9004A104C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C223B4B426B5E0D9004A104C /* Build configuration list for PBXNativeTarget "FactorizatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C223B4B526B5E0D9004A104C /* Debug */,
+				C223B4B626B5E0D9004A104C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C223B4B726B5E0D9004A104C /* Build configuration list for PBXNativeTarget "FactorizatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C223B4B826B5E0D9004A104C /* Debug */,
+				C223B4B926B5E0D9004A104C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C223B47F26B5E0CC004A104C /* Project object */;
+}
