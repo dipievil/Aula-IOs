@@ -87,3 +87,50 @@ let numeros2 = [1,2,3,4].filter{
 
 print(numeros2)
 
+
+//Variável vazia
+func funcaoNil() -> String?{
+    return nil
+}
+
+let valorOpcional: String! = funcaoNil()
+let valorOpcional2: String! = "foo"
+
+let opcional2: String? = Optional.some(valorOpcional2)
+let opcional3: String? = Optional.none
+let opcional4: String? = valorOpcional
+
+print(opcional2 == nil)
+print(opcional3 == nil)
+print(opcional4 == nil)
+
+//Dictionary
+var prod = Dictionary<String, Double>()
+prod = ["café": 8.99, "Coca-cola":5.98]
+print (prod)
+print (prod["café"]!)
+//prod.removeValue(forKey: "café")
+print(prod)
+
+print("--------")
+
+for(name, price) in prod {
+    print("\(name): \(price)")
+}
+
+//Struct
+struct Person{
+    var nome: String?
+    var altura: Double
+    
+    init(nome: String, altura: Double){
+        self.nome = nome
+        self.altura = altura
+    }
+    
+    func getDados() -> String?{
+        return "\(self.nome!) - \(self.altura)"
+    }
+}
+
+var persona = Person(nome: "Diego", altura: 1.8)
