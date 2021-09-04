@@ -8,55 +8,46 @@ struct ContentView: View {
     var body: some View {
                 
         TabView{
-            VStack{
-                Text("Biblioteca Online").fontWeight(.bold).font(.system(size: 64.0))
-                Text("The books is on the table").font(.system(size:24))
+            ZStack{
+                Color.orange
+                VStack{
+                   Text("Biblioteca Online").fontWeight(.bold).font(.system(size: 64.0))
+                    Text("The books is on the table").font(.system(size:24))
+                }
             }
-                        
+            
             NavigationView{
+               
                 List{
-                    Section(header: Text("Listar")){
-                        NavigationLink("Cadastro de Livros", destination: CadastraLivrosView())
-                        NavigationLink("Listagem de livros", destination: ListaLivrosView())
+                    Section(header: Text("Gestão de Livros")){
+                        NavigationLink("Cadastro", destination: CadastraLivrosView())
+                        NavigationLink("Listagem", destination: ListaLivrosView())
                     }
                     Section(header: Text("Configurações")){
-                        
-                        Button("Abrir Modal"){
+                        Button("Sobre..."){
                             mostrarModal.toggle()
                         }.sheet(isPresented: $mostrarModal){
                             NavigationView{
-                                Color.red.navigationBarTitle("Tela do Modal", displayMode: .inline)
+                                ZStack{
+                                    Color
+                                        .orange
+                                        .navigationBarTitle("Tela do Modal")
+                                    
+                                    HStack{
+                                        Text("Desenvolvido pela Orange 2020(c)").padding(10)
+                                    }
+                                    
+                                }
+                                
                             }
-                        }
-                        
-                        
-                        if #available(iOS 14, *){
-                            Button("Sobre"){
-                                mostrarTelaCheia.toggle()
-                            }.fullScreenCover(isPresented: $mostrarTelaCheia, content: {
-                                TelaCheiaView(mostrarTela: $mostrarTelaCheia)
-                            })
                         }
                     }
                 }.navigationBarTitle("Biblioteca Online", displayMode: .inline)
+                .padding(.top,60)
             }.navigationViewStyle(StackNavigationViewStyle())
             
         }.padding(.all, 10)
         .tabViewStyle(PageTabViewStyle())
-    }
-}
-
-struct TelaCheiaView: View {
-    
-    @Binding var mostrarTela: Bool
-    
-    var body: some View{
-        ZStack{
-            Color.yellow
-            Button("Fechar"){
-                mostrarTela.toggle()
-            }
-        }
     }
 }
 
@@ -112,10 +103,13 @@ struct CadastraLivrosView: View {
     
     var body: some View{
         VStack{
-            VStack{
-                TextField("Nome do livro", text: $txtNomeLivro )
-                TextField("Nome do autor", text: $txtAutorLivro )
-                TextField("Ano do livro", text: $txtAnoLivro )
+            VStack(alignment: .leading){
+                Text("Nome do livro")
+                TextField("Digite o nome do livro", text: $txtNomeLivro )
+                Text("Nome do livro")
+                TextField("Digite o nome do autor", text: $txtAutorLivro )
+                Text("Ano do Livro")
+                TextField("Digite o ano de lançamento do livro", text: $txtAnoLivro )
                     
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button("Adicionar livro"){
@@ -130,43 +124,6 @@ struct CadastraLivrosView: View {
             }
         }.padding()
         .navigationBarTitle("Cadastro de Livros", displayMode: .inline)
-    }
-}
-
-
-struct ProdutosView: View {
-    
-    @State var txtNomeProduto = ""
-    
-    @Environment(\.managedObjectContext) var managedObjectContext
-        /*
-    @FetchRequest(
-        entity: Produto.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Produto.nomeProd, ascending: true)])
-    var produtos: FetchedResults<Produto>
-    */
-    var body: some View{
-        VStack{
-            /*
-            List{
-                ForEach( produtos , id: \.self){ prod in
-                    Text("\(prod.nomeProd ?? " -- ") ")
-                }
-                .onDelete(perform: removerProduto)
-            }
-            HStack{
-                TextField("Digite o nome do produto", text: $txtNomeProduto )
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                Button("Salvar Produto"){
-                    let produto = Produto(context: managedObjectContext)
-                    produto.nomeProd = self.txtNomeProduto
-                    PersistenceController.banco.save()
-                    self.txtNomeProduto = ""
-                }
-            }
-             */
-        }.padding()
-        .navigationBarTitle("Lista de Produtos", displayMode: .large)
     }
 }
 
