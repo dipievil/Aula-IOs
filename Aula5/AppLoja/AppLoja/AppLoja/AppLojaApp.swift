@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct AppLojaApp: App {
+    
+    let persistenceController = PersistenceController.banco
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
