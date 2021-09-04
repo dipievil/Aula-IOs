@@ -31,12 +31,11 @@ struct ContentView: View {
                                 ZStack{
                                     Color
                                         .orange
-                                        .navigationBarTitle("Tela do Modal")
+                                        .navigationBarTitle("Sobre")
                                     
                                     HStack{
                                         Text("Desenvolvido pela Orange 2020(c)").padding(10)
                                     }
-                                    
                                 }
                                 
                             }
@@ -68,6 +67,7 @@ struct ListaLivrosView: View {
             List{
                 ForEach( livros , id: \.self){ livro in
                     Text("\(livro.nomeLivro ?? " -- ") ")
+                    NavigationLink( "\(livro.nomeLivro ?? " -- ") " , destination: EditaLivroView(livro: livro) )
                 }
                 .onDelete(perform: removerLivro)
             }
@@ -85,12 +85,59 @@ struct ListaLivrosView: View {
     }
 }
 
+struct EditaLivroView: View {
+    
+    var livro: Livro
+    
+    @State var txtNomeLivro = ""
+    @State var txtAutorLivro = ""
+    @State var txtAnoLivro = ""
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    // enviroment construído para permitir fechar a View
+    @Environment(\.presentationMode) var presentation
+    
+    var body: some View{
+        VStack{
+            TextField("Digite o nome do Livro", text: $txtNomeLivro )
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .onAppear(){
+                    self.txtNomeLivro = self.livro.nomeLivro ?? "erro"
+                }
+            
+            TextField("Digite o nome do Autor", text: $txtAutorLivro )
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .onAppear(){
+                    self.txtAutorLivro = self.livro.autorLivro ?? "erro"
+                }
+            
+            TextField("Digite o Ano do Livro",	 text: $txtAnoLivro )
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .onAppear(){
+                    self.txtAnoLivro = self.livro.anoLivro ?? "erro"
+                }
+                Button("Salvar Livro"){
+                    livro.nomeLivro? =  txtNomeLivro
+                    livro.autorLivro? =  txtAutorLivro
+                    livro.anoLivro? =  txtAnoLivro
+                    livro.managedObjectContext?.refresh(livro, mergeChanges: true)
+                    PersistenceController.banco.save()
+                    self.txtNomeLivro = ""
+                    self.txtAutorLivro = ""
+                    self.txtAnoLivro = ""
+                    presentation.wrappedValue.dismiss()
+                }
+        }.padding()
+        .navigationBarTitle("Editar Livro", displayMode: .inline)
+    }
+}
+
 struct CadastraLivrosView: View {
     
     @State var txtNomeLivro = ""
     @State var txtAutorLivro = ""
     @State var txtAnoLivro = ""
-    @State var selectedAno = ""
     
     let actualYear = Calendar.current.component(.year, from: Date())
     let arYears = GetYearsList
@@ -104,8 +151,7 @@ struct CadastraLivrosView: View {
         entity: Livro.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \Livro.nomeLivro, ascending: true)])
     var livros: FetchedResults<Livro>
-        
-    
+            
     
     var body: some View{
         VStack{
@@ -113,25 +159,17 @@ struct CadastraLivrosView: View {
                                                                 
                 Text("Nome do livro")
                 TextField("Digite o nome do livro", text: $txtNomeLivro )
-
-                
-                Text("Nome do livro")
+                Text("Nome do autor")
                 TextField("Digite o nome do autor", text: $txtAutorLivro )
                 Text("Ano do Livro")
-                TextField("Digite o ano de lançamento do livro", text: $txtAnoLivro )
-                
-                Picker(selection: $selectedAno, label: Text("Ano")) {
-                    ForEach (1900..<actualYear){ i in
-                        Text(String(i)).tag(i)
-                    }
-                }
+                TextField("Digite o ano de lançamento", text: $txtAnoLivro )
                     
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button("Adicionar livro"){
                     let livro = Livro(context: managedObjectContext)
                     livro.nomeLivro = self.txtNomeLivro
                     livro.autorLivro = self.txtAutorLivro
-                    livro.anoLivro = String(self.selectedAno)
+                    livro.anoLivro = String(self.txtAnoLivro)
                     PersistenceController.banco.save()
                     self.txtNomeLivro = ""
                     self.presentation.wrappedValue.dismiss()
