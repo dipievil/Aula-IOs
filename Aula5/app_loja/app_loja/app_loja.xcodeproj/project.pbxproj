@@ -59,10 +59,10 @@
 				C2C4282B26E39A6F0091C532 /* app_lojaApp.swift */,
 				C2C4282D26E39A6F0091C532 /* ContentView.swift */,
 				C2C4283B26E3B34D0091C532 /* Model.xcdatamodeld */,
+				C2C4283F26E3B4A00091C532 /* PersistenceController.swift */,
 				C2C4282F26E39A700091C532 /* Assets.xcassets */,
 				C2C4283426E39A700091C532 /* Info.plist */,
 				C2C4283126E39A700091C532 /* Preview Content */,
-				C2C4283F26E3B4A00091C532 /* PersistenceController.swift */,
 			);
 			path = app_loja;
 			sourceTree = "<group>";
