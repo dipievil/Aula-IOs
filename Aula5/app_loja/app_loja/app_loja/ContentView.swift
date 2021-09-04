@@ -90,6 +90,10 @@ struct CadastraLivrosView: View {
     @State var txtNomeLivro = ""
     @State var txtAutorLivro = ""
     @State var txtAnoLivro = ""
+    @State var selectedAno = ""
+    
+    let actualYear = Calendar.current.component(.year, from: Date())
+    let arYears = GetYearsList
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
@@ -100,23 +104,34 @@ struct CadastraLivrosView: View {
         entity: Livro.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \Livro.nomeLivro, ascending: true)])
     var livros: FetchedResults<Livro>
+        
+    
     
     var body: some View{
         VStack{
             VStack(alignment: .leading){
+                                                                
                 Text("Nome do livro")
                 TextField("Digite o nome do livro", text: $txtNomeLivro )
+
+                
                 Text("Nome do livro")
                 TextField("Digite o nome do autor", text: $txtAutorLivro )
                 Text("Ano do Livro")
                 TextField("Digite o ano de lançamento do livro", text: $txtAnoLivro )
+                
+                Picker(selection: $selectedAno, label: Text("Ano")) {
+                    ForEach (1900..<actualYear){ i in
+                        Text(String(i)).tag(i)
+                    }
+                }
                     
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button("Adicionar livro"){
                     let livro = Livro(context: managedObjectContext)
                     livro.nomeLivro = self.txtNomeLivro
                     livro.autorLivro = self.txtAutorLivro
-                    livro.anoLivro = self.txtAnoLivro
+                    livro.anoLivro = String(self.selectedAno)
                     PersistenceController.banco.save()
                     self.txtNomeLivro = ""
                     self.presentation.wrappedValue.dismiss()
@@ -132,3 +147,15 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+func GetYearsList(){
+    var yearsTillNow : [String] {
+        var years = [String]()
+        let actualYear = Calendar.current.component(.year, from: Date())
+        for i in (1970..<actualYear).reversed() {
+            years.append("\(i)")
+        }
+        return years
+    }
+}
+
